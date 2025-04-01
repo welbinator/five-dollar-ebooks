@@ -14,7 +14,8 @@ if (empty($first_name) || empty($last_name)) {
 ?>
 <div class="h-full flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm">
     <div class="p-4 pb-0 flex-shrink-0">
-        <a href="<?php echo esc_url($url ?: $ebook_file); ?>" target="_blank" rel="noopener noreferrer">
+    <a href="<?php the_permalink(); ?>">
+
             <div class="relative w-full aspect-[2/3] mx-auto mb-4">
                 <?php if (has_post_thumbnail()): ?>
                     <?php the_post_thumbnail('medium', ['class' => 'object-cover rounded-md w-full h-full']); ?>
@@ -41,11 +42,11 @@ if (empty($first_name) || empty($last_name)) {
     <div class="p-4 flex justify-between items-center border-t border-gray-100 dark:border-gray-700">
         <span class="font-bold text-lg text-gray-900 dark:text-white">$<?php echo esc_html(number_format((float)$price, 2)); ?></span>
         <?php if (!empty($url)): ?>
-            <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors">
+            <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 !bg-blue-600 !hover:bg-blue-700 !text-white text-sm font-medium rounded-md transition-colors">
                 Buy
             </a>
         <?php elseif (!empty($ebook_file)): ?>
-            <a href="<?php echo esc_url($ebook_file); ?>" download class="inline-flex items-center gap-1 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors">
+            <a href="<?php echo esc_url($ebook_file); ?>" download class="inline-flex items-center gap-1 px-3 py-1.5 !bg-green-600 !hover:bg-green-700 !text-white text-sm font-medium rounded-md transition-colors">
                 Download
             </a>
         <?php endif; ?>
