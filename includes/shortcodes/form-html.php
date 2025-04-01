@@ -16,14 +16,14 @@ $terms = get_terms(['taxonomy' => 'ebook-category', 'hide_empty' => false]);
     </div>
 
     <div>
-        <label class="block font-medium mb-1">Cover (jpg, png, pdf)</label>
+        <label class="block font-medium mb-1 cursor-pointer">Cover (jpg, png, pdf)</label>
         <input type="file" name="ebook_cover" accept=".jpg,.jpeg,.png,.pdf" id="ebook_cover_input" />
         <div id="cover_preview" class="mt-2"></div>
     </div>
 
     <div>
         <label class="block font-medium mb-1">Price</label>
-        <input type="number" step="0.01" name="ebook_price" required class="w-full border px-3 py-2 rounded-md" />
+        <input type="number" step="0.01" name="ebook_price" required class="border px-3 py-2 rounded-md" />
     </div>
 
     <div>
@@ -37,7 +37,7 @@ $terms = get_terms(['taxonomy' => 'ebook-category', 'hide_empty' => false]);
 
     <div>
         <label class="block font-medium mb-1">Distribution Method</label>
-        <select name="ebook_buy_option" id="buy_option" required class="w-full border px-3 py-2 rounded-md">
+        <select name="ebook_buy_option" id="buy_option" required class="border px-3 py-2 rounded-md">
             <option value="upload">Upload eBook</option>
             <option value="url">Buy Button URL</option>
         </select>
