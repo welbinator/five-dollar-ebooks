@@ -16,7 +16,7 @@ $terms = get_terms(['taxonomy' => 'ebook-category', 'hide_empty' => false]);
     </div>
 
     <div>
-        <label class="block font-medium mb-1">Cover (jpg, png, pdf)</label>
+        <label class="block font-medium mb-1 cursor-pointer">Cover (jpg, png, pdf)</label>
         <input type="file" name="ebook_cover" accept=".jpg,.jpeg,.png,.pdf" id="ebook_cover_input" />
         <div id="cover_preview" class="mt-2"></div>
     </div>
